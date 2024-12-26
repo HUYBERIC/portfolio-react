@@ -101,10 +101,10 @@ const Hero = () => {
         </div>
 
         <div className="btn-group">
-          <Link to="#contact" className="btn">
+          <Link to="/contact" className="btn">
             Hire
           </Link>
-          <Link to="#contact" className="btn">
+          <Link to="/contact" className="btn">
             Contact
           </Link>
         </div>
