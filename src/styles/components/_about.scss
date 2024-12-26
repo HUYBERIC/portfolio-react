@@ -1,0 +1,157 @@
+@use "../variables";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 5rem;
+  width: 100%;
+  padding: 2rem 5%;
+
+  .about-img {
+    margin-top: 50px;
+    display:flex;
+    justify-content: end;
+    img {
+      width: 60vw;
+      border-radius: 50%;
+      background-color: variables.$main-color;
+      box-shadow: 0 0 25px variables.$main-color;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 25px variables.$main-color, 0 0 50px variables.$main-color,
+          0 0 100px variables.$main-color;
+      }
+    }
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h2 {
+      font-size: 4rem;
+      margin: 1.5rem 0;
+    }
+
+    p {
+      font-size: 1.4rem;
+      line-height: 1.6;
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 20px;
+
+    .btn {
+      display: inline-block;
+      color: variables.$third-color;
+      padding: 0.8rem 2rem;
+      background: variables.$main-color;
+      box-shadow: 0 0 px variables.$main-color;
+      border-radius: 3rem;
+      font-size: 1.2rem;
+      border: 2px solid variables.$main-color;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px variables.$main-color,
+          0 0 20px variables.$main-color, 0 0 30px variables.$main-color;
+        background-color: black;
+        color: variables.$main-color;
+      }
+    }
+
+    .btn:nth-last-of-type(1) {
+      background-color: black;
+      color: variables.$main-color;
+      border: 2px solid variables.$main-color;
+      box-shadow: 0 0 25px transparent;
+
+      &:hover {
+        box-shadow: 0 0 25px variables.$main-color;
+        background-color: variables.$main-color;
+        color: variables.$third-color;
+      }
+    }
+  }
+}
+
+// ---- TABLETTES ---- //
+
+@media (min-width: 768px) {
+  #about {
+    gap: 7rem;
+
+    .about-img {
+      img {
+        width: 45vw;
+        max-width: 400px;
+      }
+    }
+
+    .about-content {
+      h2 {
+        font-size: 4rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    .btn-group {
+      .btn {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+// ---- DESKTOP ---- //
+
+@media (min-width: 1285px) {
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    gap: 5rem;
+    justify-content: space-between;
+
+    .about-img {
+      img {
+        width: 32vw;
+        max-width: 550px;
+      }
+    }
+
+    .about-content {
+      align-items: flex-start;
+      text-align: left;
+      h2 {
+        font-size: 7rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+      }
+    }
+
+    .btn-group {
+      .btn {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

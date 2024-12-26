@@ -1,0 +1,80 @@
+@use '../variables' as v;
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 580px;
+  background: rgba(0,0,0,0.7);
+  border: 3px solid rgba(238,238,238,0.2);
+  border-radius: 2rem;
+  margin: 0 ;
+  padding: 20px;
+  width: 375;
+
+
+  h2 {
+    font-size: 2.8rem;
+    padding-bottom: 15px;
+    color: v.$main-color;
+  }
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: 350px;
+
+    .swiper-wrapper {
+      display: flex;
+      align-items: center;
+
+      .swiper-slide {
+        width: 100%;
+        height: 370px;
+
+        img {
+          width: 350px;
+          max-width: 100%;
+          border-radius: 20px;
+          height: 350px;
+          aspect-ratio: 1;
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: v.$main-color;
+      background: rgba(0, 0, 0, 0.3);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      padding-left: 5px;
+
+      &::after {
+        font-size: 2rem;
+        font-weight: 800;
+      }
+    }
+
+    .swiper-button-prev {
+      padding-right: 10px;
+    }
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.7;
+    padding: 20px 0;
+  }
+}
+
+

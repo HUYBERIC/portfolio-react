@@ -1,0 +1,87 @@
+@use '../variables' as v;
+
+.service-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: v.$main-color;
+  border-radius: 3rem;
+  border: 5px solid transparent;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  padding: 2rem;
+  max-height: 370px;
+
+  .service-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
+    i {
+      font-size: 5rem;
+    }
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 2rem 0;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.7;
+    }
+
+    .coming-soon {
+      font-size: 1rem;
+      opacity: 0;
+      position: absolute;
+      top: -25px;
+      color: v.$text-color;
+      transition: 0.4s ease-in-out;
+    }
+  }
+
+  &:hover {
+    background: v.$second-bg-color;
+    color: white;
+    border: 5px solid v.$main-color;
+    transform: scale(1.03);
+    i, h4, p{
+      color: v.$main-color;
+    }
+
+    .coming-soon {
+      opacity: 1;
+    }
+  }
+}
+
+/* ---- TABLETTE ---- */
+
+@media (min-width: 768px) {
+  .service-card {
+    height: 550px;
+    padding: 5rem;
+
+    .service-info {
+      i {
+        font-size: 8rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,235 @@
+@use "../variables";
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 5rem;
+  width: 100%;
+  padding: 2rem 5%;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      line-height: 1.2;
+    }
+
+    h3 {
+      margin: 1rem 0;
+      font-size: 2.5rem;
+
+      .multiple-text {
+        caret-color: transparent;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    .social-icons {
+      a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        padding: 0.75rem;
+        background: transparent;
+        border: 2px solid variables.$main-color;
+        border-radius: 50%;
+        color: variables.$main-color;
+        margin: 2rem 0.5rem;
+        transition: 0.3s ease-in-out;
+        vertical-align: middle;
+
+        &:hover {
+          color: variables.$third-color;
+          background-color: variables.$main-color;
+          transform: scale(1.2) translateY(-5px);
+          box-shadow: 0 0 25px variables.$main-color;
+        }
+      }
+
+      .discordBtn {
+        position: relative;
+        cursor: pointer;
+
+        p {
+          position: absolute;
+          bottom: -22px;
+          text-wrap: nowrap;
+          opacity: 0;
+          font-size: 0.8rem;
+          transition: 0.3s ease;
+        }
+
+        &:hover {
+          p {
+            opacity: 1;
+            color: variables.$main-color;
+          }
+        }
+      }
+
+      .fiverrDiv {
+        vertical-align: middle;
+        width: 37.58px;
+        height: 37.58px;
+
+        .fiverr {
+          padding: 0;
+          background-color: variables.$main-color;
+          border-radius: 50%;
+          width: 28px;
+          height: 28px;
+          transition: 0.3s ease-in-out;
+        }
+
+        &:hover {
+          background-color: variables.$main-color;
+        }
+      }
+    }
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 5px;
+
+    .btn {
+      display: inline-block;
+      color: variables.$third-color;
+      padding: 0.8rem 2rem;
+      background: variables.$main-color;
+      box-shadow: 0 0 10px variables.$main-color;
+      border-radius: 3rem;
+      font-size: 1.2rem;
+      border: 2px solid variables.$main-color;
+      font-weight: 600;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px variables.$main-color,
+          0 0 20px variables.$main-color, 0 0 30px variables.$main-color;
+        background-color: black;
+        color: variables.$main-color;
+      }
+    }
+
+    .btn:nth-last-of-type(1) {
+      background-color: black;
+      color: variables.$main-color;
+      border: 2px solid variables.$main-color;
+      box-shadow: 0 0 25px transparent;
+
+      &:hover {
+        box-shadow: 0 0 25px variables.$main-color;
+        background-color: variables.$main-color;
+        color: variables.$third-color;
+      }
+    }
+  }
+
+  .hero-img {
+    margin-top: 120px;
+    img {
+      width: 60vw;
+      border-radius: 50%;
+      background-color: variables.$main-color;
+      box-shadow: 0 0 25px variables.$main-color;
+      transition: 0.4s ease-in-out;
+
+      &:hover {
+        box-shadow: 0 0 25px variables.$main-color,
+          0 0 50px variables.$main-color, 0 0 100px variables.$main-color;
+      }
+    }
+  }
+}
+
+// ---- TABLETTES ---- //
+
+@media (min-width: 768px) {
+  .hero {
+    .hero-content {
+      h1 {
+        font-size: 4rem;
+      }
+
+      h3 {
+        font-size: 2.5rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+    .btn-group {
+      .btn {
+        font-size: 1.6rem;
+      }
+    }
+
+    .hero-img {
+      margin-top: 90px;
+      img {
+        width: 45vw;
+        max-width: 400px;
+      }
+    }
+  }
+}
+
+// ---- DESKTOP ---- //
+
+@media (min-width: 1285px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .hero-content {
+      align-items: flex-end;
+      text-align: right;
+
+      h1 {
+        font-size: 5rem;
+      }
+
+      h3 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
+
+    .btn-group {
+      .btn {
+        font-size: 1.8rem;
+      }
+    }
+
+    .hero-img {
+      img {
+        width: 32vw;
+        max-width: 550px;
+      }
+    }
+  }
+}

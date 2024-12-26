@@ -1,0 +1,19 @@
+@use './variables';
+@use './mixins';
+@use './reset';
+
+/* Components */
+@use './components/navbar';
+@use './components/hero';
+@use './components/about';
+@use './components/education';
+@use './components/services';
+@use './components/projects';
+
+/* Modals */
+@use './modals/modalReadMore';
+@use './modals/modalSkills';
+
+/* Pages */
+@use './pages/home';
+@use './pages/contact';

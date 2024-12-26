@@ -1,0 +1,189 @@
+@use '../variables' as v;
+
+.first-section-education {
+  padding: 2rem 5%;
+  background: v.$bg-color;
+  margin: 0 auto;
+
+  .heading {
+    font-size: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+    margin-top: 130px;
+  }
+
+  .timeline-items {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 5rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 3px;
+      height: 100%;
+      background-color: v.$main-color;
+      left: 10px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 4rem;
+      padding-left: 3rem;
+
+      .timeline-dot {
+        height: 15px;
+        width: 15px;
+        background-color: v.$main-color;
+        box-shadow: 0 0 15px v.$main-color, 0 0 30px v.$main-color;
+        position: absolute;
+        left: 4px;
+        border-radius: 50%;
+        top: 10px;
+      }
+
+      .timeline-date {
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      .timeline-content {
+        background-color: v.$bg-color;
+        border: 2px solid v.$main-color;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 0 10px v.$main-color;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 20px v.$main-color;
+        }
+
+        h3 {
+          font-size: 1.2rem;
+          color: white;
+          margin-bottom: 10px;
+          font-weight: 500;
+        }
+
+        p {
+          color: white;
+          font-size: 1rem;
+          font-weight: 300;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+// ---- TABLETTES ---- //
+
+@media (min-width: 768px) {
+  .first-section-education {
+    padding: 7rem 1.5rem;
+    .heading {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      margin-top: 20px;
+    }
+
+    .timeline-items {
+      padding: 0 1.5rem;
+      &::before {
+        left: calc(50% - 1.5px);
+      }
+
+      .timeline-item {
+        padding-left: 0;
+        margin-bottom: 5rem;
+
+        &:nth-child(odd) {
+          padding-right: calc(50% + 3rem);
+          text-align: right;
+        }
+
+        &:nth-child(even) {
+          padding-left: calc(50% + 3rem);
+        }
+
+        .timeline-dot {
+          left: calc(50% - 0.75rem);
+        }
+
+        .timeline-date {
+          font-size: 1.5rem;
+        }
+
+        .timeline-content {
+          h3 {
+            font-size: 1.6rem;
+          }
+
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ---- DESKTOP ---- //
+
+@media (min-width: 880px) {
+  .first-section-education {
+    .heading {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .timeline-items {
+      &::before {
+        left: calc(50% - 2px);
+      }
+
+      .timeline-item {
+        padding-left: 0;
+        margin-bottom: 6rem;
+
+        &:nth-child(odd) {
+          padding-right: calc(50% + 5rem);
+          text-align: right;
+        }
+
+        &:nth-child(even) {
+          padding-left: calc(50% + 5rem);
+        }
+
+        .timeline-dot {
+          height: 2rem;
+          width: 2rem;
+          left: calc(50% - 1rem);
+        }
+
+        .timeline-date {
+          font-size: 1.8rem;
+        }
+
+        .timeline-content {
+          padding: 2rem 3rem;
+          border-radius: 3rem;
+
+          h3 {
+            font-size: 2rem;
+          }
+
+          p {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}
