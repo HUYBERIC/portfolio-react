@@ -86,9 +86,9 @@ const Contact = () => {
               autoComplete="off"
               required
             />
-          </div>
+          {/* </div> */}
 
-          <div className="input-box">
+          {/* <div className="input-box"> */}
             <input
               type="tel"
               name="phoneNumber"
