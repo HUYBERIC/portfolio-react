@@ -26,22 +26,24 @@ import TMDBModal from "../mockup/TMDBModal.png";
 import TMDBLogin from "../mockup/TMDBLogin.png";
 import TMDSignUp from "../mockup/TMDSignUp.png";
 
+import PFLoader from "../mockup/PFLoader.png";
+import PFHero from "../mockup/PFHero.png";
+import PFEducation from "../mockup/PFEducation.png";
+import PFContact from "../mockup/PFContact.png";
+
 const Projects = () => {
   const projects = [
     {
       title: "This portfolio",
       subtitle: "Don't click, juste visit",
       images: [
-        TMDBDesk,
-        TMDBDesk2,
-        TMDSearch,
-        TMDBHover,
-        TMDBModal,
-        TMDBLogin,
-        TMDSignUp,
+        PFLoader,
+        PFHero,
+        PFEducation,
+        PFContact,
       ],
       date: "December 2024",
-      link: "https://bit.ly/huyberic-pf-react",
+      link: "https://huyberic-pf-react.vercel.app/",
     },
     {
       title: "TheMovieDB",
