@@ -1,6 +1,5 @@
 import React from "react";
 import "../../styles/cards/_serviceCard.scss";
-import "../../styles/modals/_ModalReadMore.scss";
 
 const ServiceCard = ({ icon, title, description, comingSoon }) => {
   return (
