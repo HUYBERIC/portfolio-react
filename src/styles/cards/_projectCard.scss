@@ -49,23 +49,19 @@
       }
     }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: v.$main-color;
-      background: rgba(0, 0, 0, 0.3);
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      padding-left: 5px;
+    .swiper-scrollbar {
+      background: rgba(#FBCAEF,0.4);
+      width: 90%;
+      margin-left: 12.5px;
+      margin-bottom: 5px;
+      height: 10px;
+      border-radius: 10px;
+      overflow: hidden;
 
-      &::after {
-        font-size: 2rem;
-        font-weight: 800;
+      .swiper-scrollbar-drag {
+        background: v.$main-color;
+        border-radius: 10px;
       }
-    }
-
-    .swiper-button-prev {
-      padding-right: 10px;
     }
   }
 
@@ -73,7 +69,8 @@
     font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.7;
-    padding: 20px 0;
+    padding: 5px 20px;
+    text-transform: uppercase;
   }
 }
 

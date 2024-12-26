@@ -29,7 +29,6 @@ import TMDSignUp from "../mockup/TMDSignUp.png";
 const Projects = () => {
   const projects = [
     {
-      id: "project-1",
       title: "ClassicProjectCSS",
       subtitle: "First responsive project",
       images: [FPDesk, FPTablet, FPMobile],
@@ -37,7 +36,6 @@ const Projects = () => {
       link: "https://huyberic.github.io/TheFinalProjectCss/",
     },
     {
-      id: "project-2",
       title: "GalaxyProjectCSS",
       subtitle: "First big project",
       images: [UPDesk, UPTablet, UPMobile],
@@ -45,7 +43,6 @@ const Projects = () => {
       link: "https://huyberic.github.io/UltimateProjectCSS/",
     },
     {
-      id: "project-3",
       title: "CreativeDesign",
       subtitle: "Full responsive project",
       images: [CDDesk, CDTablet, CDMobile],
@@ -53,7 +50,6 @@ const Projects = () => {
       link: "https://huyberic.github.io/DesignCreative/",
     },
     {
-      id: "project-4",
       title: "TheMealDB",
       subtitle: "First API project",
       images: [MealDesk, MealTablet, MealMobile],
@@ -61,9 +57,8 @@ const Projects = () => {
       link: "https://huyberic.github.io/TheMealDB/",
     },
     {
-      id: "project-5",
       title: "TheMovieDB",
-      subtitle: "Desktop only",
+      subtitle: "Netflix like - desktop only",
       images: [
         TMDBDesk,
         TMDBDesk2,
@@ -84,7 +79,6 @@ const Projects = () => {
       <div className="wrapper">
         {projects.map((project) => (
           <ProjectCard
-            key={project.id}
             id={project.id}
             title={project.title}
             subtitle={project.subtitle}
