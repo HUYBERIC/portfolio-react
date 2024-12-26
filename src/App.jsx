@@ -17,6 +17,7 @@ import { premiumVariants } from './styles/animations/animations';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Footer from './components/Footer';
 AOS.init();
 
 const App = () => {
@@ -123,6 +124,7 @@ const App = () => {
                 }
               />
             </Routes>
+            <Footer/>
           </div>
         )}
       </div>

@@ -29,32 +29,19 @@ import TMDSignUp from "../mockup/TMDSignUp.png";
 const Projects = () => {
   const projects = [
     {
-      title: "ClassicProjectCSS",
-      subtitle: "First responsive project",
-      images: [FPDesk, FPTablet, FPMobile],
-      date: "September 2024",
-      link: "https://huyberic.github.io/TheFinalProjectCss/",
-    },
-    {
-      title: "GalaxyProjectCSS",
-      subtitle: "First big project",
-      images: [UPDesk, UPTablet, UPMobile],
-      date: "October 2024",
-      link: "https://huyberic.github.io/UltimateProjectCSS/",
-    },
-    {
-      title: "CreativeDesign",
-      subtitle: "Full responsive project",
-      images: [CDDesk, CDTablet, CDMobile],
-      date: "October 2024",
-      link: "https://huyberic.github.io/DesignCreative/",
-    },
-    {
-      title: "TheMealDB",
-      subtitle: "First API project",
-      images: [MealDesk, MealTablet, MealMobile],
-      date: "November 2024",
-      link: "https://huyberic.github.io/TheMealDB/",
+      title: "This portfolio",
+      subtitle: "Don't click, juste visit",
+      images: [
+        TMDBDesk,
+        TMDBDesk2,
+        TMDSearch,
+        TMDBHover,
+        TMDBModal,
+        TMDBLogin,
+        TMDSignUp,
+      ],
+      date: "December 2024",
+      link: "https://bit.ly/huyberic-pf-react",
     },
     {
       title: "TheMovieDB",
@@ -70,6 +57,34 @@ const Projects = () => {
       ],
       date: "November 2024",
       link: "https://huyberic.github.io/BeMovies/",
+    },
+    {
+      title: "TheMealDB",
+      subtitle: "First API project",
+      images: [MealDesk, MealTablet, MealMobile],
+      date: "November 2024",
+      link: "https://huyberic.github.io/TheMealDB/",
+    },
+    {
+      title: "CreativeDesign",
+      subtitle: "Full responsive project",
+      images: [CDDesk, CDTablet, CDMobile],
+      date: "October 2024",
+      link: "https://huyberic.github.io/DesignCreative/",
+    },
+    {
+      title: "GalaxyProjectCSS",
+      subtitle: "First big project",
+      images: [UPDesk, UPTablet, UPMobile],
+      date: "October 2024",
+      link: "https://huyberic.github.io/UltimateProjectCSS/",
+    },
+    {
+      title: "ClassicProjectCSS",
+      subtitle: "First responsive project",
+      images: [FPDesk, FPTablet, FPMobile],
+      date: "September 2024",
+      link: "https://huyberic.github.io/TheFinalProjectCss/",
     },
   ];
 
