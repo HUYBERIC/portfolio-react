@@ -13,7 +13,7 @@ const EducationPage = () => {
           <div className="timeline-content">
             <h3>Professional Training - Career Change</h3>
             <p>
-              Fullstack Web Developer training with a 2-month internship at Liège Airport.
+              Fullstack Web Developer training at BeCode with a 2-month internship at Liège Airport.
             </p>
           </div>
         </div>
