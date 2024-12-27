@@ -31,6 +31,7 @@ import PFLoader from "../mockup/PFLoader.png";
 import PFHero from "../mockup/PFHero.png";
 import PFEducation from "../mockup/PFEducation.png";
 import PFContact from "../mockup/PFContact.png";
+import ScrambleText from "./ScrambleText";
 
 const Projects = () => {
 
@@ -119,7 +120,9 @@ const Projects = () => {
         <Loader /> // Affiche le loader pendant le chargement
       ) : (
         <section className="section-projects">
-          <h2 className="heading">Projects</h2>
+          <h2 className="heading">
+          <ScrambleText text="Projects" speed={80}/>
+          </h2>
           <div className="wrapper">
             {projects.map((project, index) => (
               <ProjectCard

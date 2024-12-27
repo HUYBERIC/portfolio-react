@@ -3,6 +3,7 @@ import "../styles/components/_about.scss";
 import memoji3 from "../img/memoji3.png";
 import ModalReadMore from "./modals/ModalReadMore";
 import ModalSkills from "./modals/ModalSkills";
+import ScrambleText from "./ScrambleText";
 
 const About = () => {
   const [showModalReadMore, setShowModalReadMore] = useState(false);
@@ -33,7 +34,8 @@ const About = () => {
 
       <div className="about-content">
         <h2>
-          About <span>Me</span>
+        <ScrambleText text="About " speed={80} className="part-1"/>
+        <ScrambleText text="Me" speed={160} className="part-2"/>
         </h2>
         <p>
           I'm a 28-year-old Belgian, proud pet parent to Tiddy, my border

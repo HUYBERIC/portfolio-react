@@ -1,6 +1,7 @@
 import React from 'react'
 import "../styles/components/_services.scss";
 import ServiceCard from "./cards/ServiceCard";
+import ScrambleText from './ScrambleText';
 
 const Services = () => {
   // Données des cartes
@@ -37,7 +38,9 @@ const Services = () => {
 
   return (
     <section className="services" id="services">
-      <h2 className="heading">Services</h2>
+      <h2 className="heading">
+      <ScrambleText text="Services" speed={80}/>
+      </h2>
       <div className="services-container">
         {services.map((service, index) => (
           <ServiceCard

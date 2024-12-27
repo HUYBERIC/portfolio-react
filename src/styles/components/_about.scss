@@ -36,6 +36,14 @@
     h2 {
       font-size: 4rem;
       margin: 1.5rem 0;
+      .part-1{
+        color: variables.$text-color;
+        transition: all 0.3s ease-in-out;
+        }
+        .part-2{
+        color: variables.$main-color;
+        transition: all 0.3s ease-in-out;
+        }
     }
 
     p {

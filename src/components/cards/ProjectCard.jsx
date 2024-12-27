@@ -4,11 +4,14 @@ import { Scrollbar, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import "../../styles/cards/_projectCard.scss";
+import ScrambleText from "../ScrambleText";
 
 const ProjectCard = ({ title, subtitle, images, date, link }) => {
   return (
     <div className="project-card">
-      <h2>{title}</h2>
+      <h2>
+      <ScrambleText text={title} speed={100} />
+      </h2>
       <h3>{subtitle}</h3>
 
       <Swiper

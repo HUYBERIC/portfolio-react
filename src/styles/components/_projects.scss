@@ -12,6 +12,9 @@
       text-align: center;
       margin: 2rem 0;
       color: white;
+      span{
+        color: v.$text-color;
+      }
       @media (min-width: 880px){
         font-size: 4rem;
         margin-bottom: 4rem;

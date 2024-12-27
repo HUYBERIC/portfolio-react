@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/components/_contact.scss";
 import emailjs from "emailjs-com";
+import ScrambleText from "./ScrambleText";
 
 const Contact = () => {
   // Gestion de l'état du formulaire
@@ -62,7 +63,8 @@ const Contact = () => {
   return (
     <section className="contact">
       <h2 className="heading">
-        Contact <span>Me</span>
+        <ScrambleText text="Contact " speed={80} className="part-1" />
+        <ScrambleText text="Me" speed={160} className="part-2" />
       </h2>
 
       <form onSubmit={handleSubmit}>

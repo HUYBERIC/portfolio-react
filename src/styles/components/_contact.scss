@@ -13,6 +13,14 @@
     font-size: 5rem;
     text-align: center;
     margin: 3rem 0;
+    .part-1{
+      color: v.$text-color;
+      transition: all 0.3s ease-in-out;
+      }
+      .part-2{
+      color: v.$main-color;
+      transition: all 0.3s ease-in-out;
+      }
   }
 
   form {

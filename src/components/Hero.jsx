@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import "../styles/components/_hero.scss";
 import memoji2 from "../img/memoji2.png";
 import fiverr from "../img/fiverr.png";
+import ScrambleText from "./ScrambleText";
 
 const Hero = () => {
   useEffect(() => {
@@ -53,7 +54,8 @@ const Hero = () => {
     <section className="hero" id="hero">
       <div className="hero-content">
         <h1>
-          Hi, It's <span>Eric</span>
+          <ScrambleText text="Hi, It's " speed={50} className="part-1"/>
+          <ScrambleText text="Eric" speed={100} className="part-2"/>
         </h1>
         <h3>
           I'm a <span className="multiple-text"></span>
