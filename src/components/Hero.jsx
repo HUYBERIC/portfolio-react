@@ -5,7 +5,6 @@ import Swal from "sweetalert2";
 import "../styles/components/_hero.scss";
 import memoji2 from "../img/memoji2.png";
 import fiverr from "../img/fiverr.png";
-import AOS from "aos";
 
 const Hero = () => {
   useEffect(() => {
@@ -49,13 +48,10 @@ const Hero = () => {
       });
   };
 
-  useEffect(() => {
-    AOS.refresh();
-  }, []);
 
   return (
     <section className="hero" id="hero">
-      <div className="hero-content" data-aos="fade-right">
+      <div className="hero-content">
         <h1>
           Hi, It's <span>Eric</span>
         </h1>
@@ -110,7 +106,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="hero-img" data-aos="fade-left">
+      <div className="hero-img">
         <img src={memoji2} alt="Hero" />
       </div>
     </section>

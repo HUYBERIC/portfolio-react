@@ -9,11 +9,13 @@
 @use './components/education';
 @use './components/services';
 @use './components/projects';
+@use './components/timer';
+@use './components/footer';
 
 /* Modals */
 @use './modals/modalReadMore';
 @use './modals/modalSkills';
 
-/* Pages */
-@use './pages/home';
-@use './pages/contact';
+/* Cards */
+@use './cards/projectCard';
+@use './cards/serviceCard';

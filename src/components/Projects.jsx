@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ProjectCard from "../components/cards/ProjectCard";
+import Loader from "../components/Loader";
 import "../styles/components/_projects.scss";
 
 import FPDesk from "../mockup/FPDesk.png";
@@ -32,6 +33,9 @@ import PFEducation from "../mockup/PFEducation.png";
 import PFContact from "../mockup/PFContact.png";
 
 const Projects = () => {
+
+  const [isLoading, setIsLoading] = useState(true);
+  
   const projects = [
     {
       title: "This portfolio",
@@ -90,22 +94,47 @@ const Projects = () => {
     },
   ];
 
+  const preloadImages = (imageUrls) => {
+    const promises = imageUrls.map((url) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = resolve; // Succès
+        img.onerror = reject; // Erreur
+      });
+    });
+    return Promise.all(promises);
+  };
+
+  useEffect(() => {
+    const allImages = projects.flatMap((project) => project.images); // Récupère toutes les URLs des images
+    preloadImages(allImages).then(() => {
+      setIsLoading(false); // Désactive le loader une fois que les images sont chargées
+    });
+  }, [projects]);
+
   return (
-    <section className="fourth-section-projects">
-      <h2 className="heading">Projects</h2>
-      <div className="wrapper">
-        {projects.map((project) => (
-          <ProjectCard
-            id={project.id}
-            title={project.title}
-            subtitle={project.subtitle}
-            images={project.images}
-            date={project.date}
-            link={project.link}
-          />
-        ))}
-      </div>
-    </section>
+    <>
+      {isLoading ? (
+        <Loader /> // Affiche le loader pendant le chargement
+      ) : (
+        <section className="section-projects">
+          <h2 className="heading">Projects</h2>
+          <div className="wrapper">
+            {projects.map((project, index) => (
+              <ProjectCard
+                key={index}
+                title={project.title}
+                subtitle={project.subtitle}
+                images={project.images}
+                date={project.date}
+                link={project.link}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 

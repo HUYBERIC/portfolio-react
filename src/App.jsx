@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
@@ -15,10 +16,6 @@ import EducationPage from './pages/EducationPage';
 import { premiumVariants } from './styles/animations/animations';
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import Footer from './components/Footer';
-AOS.init();
 
 const App = () => {
   const location = useLocation();
@@ -30,7 +27,6 @@ const App = () => {
     const timer = setTimeout(() => {
       setIsLoading(false);
       setIsContentVisible(true);
-      AOS.refresh();
     }, 2000);
 
     return () => clearTimeout(timer);
@@ -88,7 +84,7 @@ const App = () => {
                 path="/services"
                 element={
                   <motion.div
-                    variants={premiumVariants.default}
+                    variants={premiumVariants.rotate} // Rotation subtile
                     initial="initial"
                     animate="animate"
                     exit="exit"
@@ -101,7 +97,7 @@ const App = () => {
                 path="/projects"
                 element={
                   <motion.div
-                    variants={premiumVariants.default}
+                    variants={premiumVariants.blur} // Apparition avec flou
                     initial="initial"
                     animate="animate"
                     exit="exit"

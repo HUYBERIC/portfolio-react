@@ -19,7 +19,7 @@
       border-radius: 50%;
       background-color: variables.$main-color;
       box-shadow: 0 0 25px variables.$main-color;
-      transition: 0.4s ease-in-out;
+      transition: box-shadow .4s ease-in-out;
 
       &:hover {
         box-shadow: 0 0 25px variables.$main-color, 0 0 50px variables.$main-color,

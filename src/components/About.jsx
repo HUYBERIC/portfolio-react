@@ -27,11 +27,11 @@ const About = () => {
 
   return (
     <section className="about" id="about">
-      <div className="about-img" data-aos="fade-right">
+      <div className="about-img">
         <img src={memoji3} alt="" />
       </div>
 
-      <div className="about-content" data-aos="fade-left">
+      <div className="about-content">
         <h2>
           About <span>Me</span>
         </h2>

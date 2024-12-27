@@ -21,7 +21,9 @@ const ProjectCard = ({ title, subtitle, images, date, link }) => {
       >
         {images.map((image, index) => (
           <SwiperSlide key={index}>
-            <img src={image} alt={`${title}-${index}`} />
+            <img src={image}
+            alt={`${title}-${index}`}
+            loading="lazy" />
           </SwiperSlide>
         ))}
       </Swiper>

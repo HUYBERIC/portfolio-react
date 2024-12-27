@@ -10,7 +10,7 @@ const EducationPage = () => {
         <div className="timeline-item">
           <div className="timeline-dot"></div>
           <div className="timeline-date">2014</div>
-          <div className="timeline-content" data-aos="fade-right">
+          <div className="timeline-content">
             <h3>Secondary Education</h3>
             <p>
               Graduated in General Studies with a focus on Economic Sciences.
@@ -21,7 +21,7 @@ const EducationPage = () => {
         <div className="timeline-item">
           <div className="timeline-dot"></div>
           <div className="timeline-date">2020</div>
-          <div className="timeline-content" data-aos="fade-left">
+          <div className="timeline-content">
             <h3>Higher Education (University College)</h3>
             <p>
               Graduated as a Mathematics Teacher, qualified to teach in lower
@@ -33,7 +33,7 @@ const EducationPage = () => {
         <div className="timeline-item">
           <div className="timeline-dot"></div>
           <div className="timeline-date">2025</div>
-          <div className="timeline-content" data-aos="fade-right">
+          <div className="timeline-content">
             <h3>Professional Training - Career Change</h3>
             <p>
               Fullstack Web Developer training with a 2-month internship at
