@@ -72,14 +72,6 @@
     line-height: 1.7;
     padding: 5px 20px;
     text-transform: uppercase;
-    &:hover{
-      transform: scale(1.05);
-      box-shadow: 0 0 10px v.$main-color,
-                  0 0 17px v.$main-color,
-                  0 0 25px v.$main-color;
-      background-color: black;
-      color: v.$main-color;
-  }
   }
 }
 
